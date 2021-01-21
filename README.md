@@ -1,8 +1,8 @@
 # FDR High School - AP CS A
 
-## Last Name:  
-## First Name: 
-## GitHub Username: 
+## Last Name:  Lin
+## First Name: Zhi Feng
+## GitHub Username: zhifeng29
 
 
 ### General Workflow: 
