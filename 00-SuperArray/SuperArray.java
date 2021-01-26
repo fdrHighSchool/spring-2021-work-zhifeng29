@@ -3,15 +3,12 @@ public class SuperArray {
   // instance variables
   private int[] arr;
   private int index;
-  private int val;
 
   //------------------------------------------------//
   // constructor
   public SuperArray() {
     this.arr = new int[10];
     this.index = 0;
-
-
 
   }
   public SuperArray(int l) {
@@ -29,23 +26,25 @@ public class SuperArray {
     for (int i = 0;i < temp2.length;i++){
       temp[i] = temp2[i];
       this.index++;
-    }
+    }// end of method
 
     temp[this.index] = val;
     this.index++;
 
     for (int i = 0;i < temp3.length;i++){
       temp[i + this.index] = temp3[i];
-    }
 
+    }
+    this.index = 0;
     this.arr = temp;
   }//end of add
+
   public void add (int val) {
     for(int i = 0; i < arr.length;i++){
       if(this.arr[i] == 0){
         this.arr[i] = val;
         return;
-      }
+      }// end of method
     }
     int[] temp = Arrays.copyOf(this.arr,this.arr.length + 1 );
     temp[temp.length-1] = val;
@@ -54,12 +53,12 @@ public class SuperArray {
 
   public void set (int index,int val) {
     this.arr[index] = val;
-  }
+  }// end of method
 
   public void grow (int n) {
     int[] temp = Arrays.copyOf(this.arr,this.arr.length + n );
     this.arr = temp;
-  }
+  }// end of method
 
   public boolean isEmpty () {
     for(int i = 0; i < arr.length;i++){
@@ -68,7 +67,7 @@ public class SuperArray {
       }
     }
     return true;
-  }
+  }// end of method
 
   public void remove (int index) {
     int[] temp = new int[this.arr.length-1];
@@ -82,16 +81,16 @@ public class SuperArray {
     for (int i = 0;i < temp3.length;i++){
       temp[i + this.index] = temp3[i];
     }
+    this.index = 0;
     this.arr = temp;
   }//end of remove
 
   public void display() {
     System.out.println(Arrays.toString(this.arr));
   }
-
-  //public String toString() {}
-
-
-
-
+//i personally like leaveing print inside of method so i use display mostly but i also did tostring
+  public String toString() {
+    return Arrays.toString(this.arr);
   }//end toString method
+
+}//end of class

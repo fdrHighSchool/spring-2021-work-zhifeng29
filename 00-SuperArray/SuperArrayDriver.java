@@ -21,7 +21,10 @@ public class SuperArrayDriver {
     for (int i = 0;i < 5;i++){
       array2.set(i,i);
     }
-    array2.add(1,100);
     array2.display();
+    array2.add(1,100);
+    array2.add(5,100);
+    //array2.display();
+    System.out.println(array2.toString());
   }//end of main
 }//end of class
