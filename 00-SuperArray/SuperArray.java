@@ -85,6 +85,15 @@ public class SuperArray {
     this.arr = temp;
   }//end of remove
 
+  public void average(){
+    double sum = 0;
+    for (int i = 0 ; i < this.arr.length;i++){
+      sum = this.arr[i] + sum;
+    }
+      sum = sum / this.arr.length;
+      System.out.println(sum);
+  }
+
   public void display() {
     System.out.println(Arrays.toString(this.arr));
   }
