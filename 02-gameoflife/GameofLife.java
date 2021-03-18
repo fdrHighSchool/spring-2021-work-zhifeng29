@@ -31,6 +31,7 @@ public class GameofLife{
   }
 
   public void updateBoard(){
+    countNeighbors();
     for (int c = 0; c < this.board.length; c++) {
       for (int r = 0; r < this.board[c].length; r++) {
         if (this.neighbor[c][r] < 2 || this.neighbor[c][r] > 3 ){
@@ -42,8 +43,10 @@ public class GameofLife{
 
       }
     }
-    for (int[] row : this.neighbor){
-    Arrays.fill(row, 0);
+    for (int c = 0; c < this.board.length; c++) {
+      for (int r = 0; r < this.board[c].length; r++) {
+          this.neighbor[c][r] = 0;
+      }
     }
   }
   public void countNeighbors(){
@@ -74,11 +77,11 @@ public class GameofLife{
 
   }//end of countNeighbors
   public void setStatus (int x,int y){
-    if (this.board[y][x] == 0){
-      this.board[y][x] = 1;
+    if (this.board[y-1][x-1] == 0){
+      this.board[y-1][x-1] = 1;
     }
     else {
-      this.board[y][x] = 0;
+      this.board[y-1][x-1] = 0;
     }
   }
 
