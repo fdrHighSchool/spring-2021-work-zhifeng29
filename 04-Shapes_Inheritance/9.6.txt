@@ -1,0 +1,7 @@
+The same metheod in the parent class will get overwritten in 
+
+if no constructor was written a default constrctor will be provide by the compiler 
+ 
+at compile time and run time  a method have to exist in the class in order to run 
+
+Used super(varible) to access parent class
