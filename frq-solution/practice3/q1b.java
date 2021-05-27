@@ -11,7 +11,7 @@ public String findBetterGuess(String guess1, String guess2){
   else{
     int find = 0;
     while(find == 0){
-      find = guess1.substring(i,i+1).compareToIgnoreCase(guess2.substring(i,i+1))
+      find = guess1.substring(i,i+1).compareTo(guess2.substring(i,i+1))
       i++;
     }
     if (find < 0){
